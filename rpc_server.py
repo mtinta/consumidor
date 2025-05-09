@@ -1,3 +1,4 @@
+from flask import Flask
 import pika
 import time
 import os
@@ -47,6 +48,8 @@ def main():
     
     print(" [*] Esperando mensajes RPC. Presiona CTRL+C para salir")
     channel.start_consuming()
+    
+app = Flask(__name__)
 
 if __name__ == '__main__':
     # Usa el puerto asignado por Render, por defecto 5000 si no se establece
