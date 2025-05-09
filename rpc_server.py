@@ -1,6 +1,6 @@
 import pika
 import time
-
+import os
 def procesar_mensaje(mensaje):
     """Simula procesamiento complejo"""
     print(f"Procesando: {mensaje}")
