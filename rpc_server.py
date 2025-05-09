@@ -49,4 +49,6 @@ def main():
     channel.start_consuming()
 
 if __name__ == '__main__':
-    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+    # Usa el puerto asignado por Render, por defecto 5000 si no se establece
+    port = int(os.getenv('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=True)
